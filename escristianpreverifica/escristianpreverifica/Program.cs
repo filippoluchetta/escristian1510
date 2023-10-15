@@ -128,6 +128,22 @@
             }
         }
 
+        static void Q6()
+        {
+            var listaartisti = artisti.Join(opere,
+                a => a.Id,
+                o => o.FkArtista,
+                (a, o) => new { a, o }).GroupBy(a => (a.a.Cognome, a.a.Nazionalita));
+            foreach (var gruppo in listaartisti)
+            {
+                Console.WriteLine(gruppo.Key.Cognome);
+                Console.WriteLine(gruppo.Key.Nazionalita);
+                foreach (var item in gruppo)
+                {
+                    Console.WriteLine(item.o);
+                }
+            }
+        }
         static void Main(string[] args)
         {
             //Q1("Picasso");
@@ -138,8 +154,9 @@
             //Console.WriteLine("-------------------------------------------");
             //Q4();
             //Console.WriteLine("-------------------------------------------");
-            Q5();
+            //Q5();
             //Console.WriteLine("-------------------------------------------");
+            Q6();
             //Console.WriteLine("-------------------------------------------");
             //Console.WriteLine("-------------------------------------------");
             //Console.WriteLine("-------------------------------------------");
