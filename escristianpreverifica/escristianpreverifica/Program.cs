@@ -78,10 +78,26 @@
                 Console.WriteLine(item);
             }
         }
+
+        static void Q2()
+        {
+            var listaartisti = artisti.GroupBy(a => a.Nazionalita);
+            foreach (var gruppo in listaartisti)
+            {
+                Console.WriteLine($"gli artisti della nazionalità {gruppo.Key} sono:");
+                foreach (var item in gruppo)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
         static void Main(string[] args)
         {
-            Q1("Picasso");
+            //Q1("Picasso");
+            //Console.WriteLine("-------------------------------------------");
+            Q2();
             Console.WriteLine("-------------------------------------------");
+
         }
     }
 }
