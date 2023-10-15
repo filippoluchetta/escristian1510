@@ -144,6 +144,24 @@
                 }
             }
         }
+
+        static void Q7()
+        {
+            var listaartisti = artisti.Join(opere,
+                a => a.Id,
+                o => o.FkArtista,
+                (a, o) => new { a, o }).GroupBy(a => a.a.Cognome);
+            Console.WriteLine("gli artisti con più di 2 quadri sono:");
+            foreach (var gruppo in listaartisti)
+            {
+                
+                if (gruppo.Count() >= 2)
+                {
+                    Console.WriteLine(gruppo.Key);
+                }
+            }
+
+        }
         static void Main(string[] args)
         {
             //Q1("Picasso");
@@ -156,8 +174,9 @@
             //Console.WriteLine("-------------------------------------------");
             //Q5();
             //Console.WriteLine("-------------------------------------------");
-            Q6();
+            //Q6();
             //Console.WriteLine("-------------------------------------------");
+            Q7();
             //Console.WriteLine("-------------------------------------------");
             //Console.WriteLine("-------------------------------------------");
 
