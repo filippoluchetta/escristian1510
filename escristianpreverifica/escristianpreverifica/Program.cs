@@ -162,6 +162,24 @@
             }
 
         }
+
+        static void Q8()
+        {
+            var listaopere = opere.Join(personaggi,
+                o => o.Id,
+                p => p.FkOperaId,
+                (o, p) => new { o, p }).GroupBy(o => o.o.Titolo);
+            Console.WriteLine("le opere con almeno 1 personaggio sono:");
+            foreach (var gruppo in listaopere)
+            {
+                if(gruppo.Count() != 0)
+                {
+                    Console.WriteLine(gruppo.Key);
+                }
+            }
+        }
+
+
         static void Main(string[] args)
         {
             //Q1("Picasso");
@@ -176,8 +194,9 @@
             //Console.WriteLine("-------------------------------------------");
             //Q6();
             //Console.WriteLine("-------------------------------------------");
-            Q7();
+            //Q7();
             //Console.WriteLine("-------------------------------------------");
+            Q8();
             //Console.WriteLine("-------------------------------------------");
 
         }
