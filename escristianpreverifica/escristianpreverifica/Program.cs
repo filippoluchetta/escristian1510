@@ -101,13 +101,27 @@
 
             }
         }
+
+        static void Q4()
+        {
+            var listaartisti = artisti.Where(a => a.Cognome == "Picasso").Join(opere,
+                a => a.Id,
+                o => o.FkArtista,
+                (a, o) => new { a, o });
+            Console.WriteLine($"la media delle opere di picasso è {listaartisti.Average(o => o.o.Quotazione)}");
+            Console.WriteLine($"il max delle opere di picasso è {listaartisti.Max(o => o.o.Quotazione)}");
+            Console.WriteLine($"il min delle opere di picasso è {listaartisti.Min(o => o.o.Quotazione)}");
+
+        }
         static void Main(string[] args)
         {
             //Q1("Picasso");
             //Console.WriteLine("-------------------------------------------");
             //Q2();
             //Console.WriteLine("-------------------------------------------");
-            Q3();
+            //Q3();
+            //Console.WriteLine("-------------------------------------------");
+            Q4();
             Console.WriteLine("-------------------------------------------");
 
         }
