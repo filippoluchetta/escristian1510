@@ -113,6 +113,21 @@
             Console.WriteLine($"il min delle opere di picasso è {listaartisti.Min(o => o.o.Quotazione)}");
 
         }
+
+        static void Q5()
+        {
+            var listaartisti = opere.GroupBy(o => o.FkArtista).Join(artisti,
+                g => g.Key,
+                a => a.Id,
+                (g, a) => new { g, a });
+            foreach (var item in listaartisti)
+            {
+                Console.WriteLine($"la media delle opere di {item.a.Cognome} è {item.g.Average(o => o.Quotazione)}");
+                Console.WriteLine($"il max delle opere di {item.a.Cognome} è {item.g.Max(o => o.Quotazione)}");
+                Console.WriteLine($"il min delle opere di {item.a.Cognome} è {item.g.Min(o => o.Quotazione)}");
+            }
+        }
+
         static void Main(string[] args)
         {
             //Q1("Picasso");
@@ -121,8 +136,13 @@
             //Console.WriteLine("-------------------------------------------");
             //Q3();
             //Console.WriteLine("-------------------------------------------");
-            Q4();
-            Console.WriteLine("-------------------------------------------");
+            //Q4();
+            //Console.WriteLine("-------------------------------------------");
+            Q5();
+            //Console.WriteLine("-------------------------------------------");
+            //Console.WriteLine("-------------------------------------------");
+            //Console.WriteLine("-------------------------------------------");
+            //Console.WriteLine("-------------------------------------------");
 
         }
     }
