@@ -1,0 +1,14 @@
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\bin\Debug\net6.0\escristianpreverifica.exe
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\bin\Debug\net6.0\escristianpreverifica.deps.json
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\bin\Debug\net6.0\escristianpreverifica.runtimeconfig.json
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\bin\Debug\net6.0\escristianpreverifica.dll
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\bin\Debug\net6.0\escristianpreverifica.pdb
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\obj\Debug\net6.0\escristianpreverifica.GeneratedMSBuildEditorConfig.editorconfig
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\obj\Debug\net6.0\escristianpreverifica.AssemblyInfoInputs.cache
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\obj\Debug\net6.0\escristianpreverifica.AssemblyInfo.cs
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\obj\Debug\net6.0\escristianpreverifica.csproj.CoreCompileInputs.cache
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\obj\Debug\net6.0\escristianpreverifica.dll
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\obj\Debug\net6.0\refint\escristianpreverifica.dll
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\obj\Debug\net6.0\escristianpreverifica.pdb
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\obj\Debug\net6.0\escristianpreverifica.genruntimeconfig.cache
+C:\escristian1510\escristian1510\escristianpreverifica\escristianpreverifica\obj\Debug\net6.0\ref\escristianpreverifica.dll

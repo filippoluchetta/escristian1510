@@ -67,9 +67,21 @@
             new (){Id=6, Nome="Una musa metafisica", FkOperaId=6},
         };
 
+        static void Q1(string cognomeautoredacercare)
+        {
+            var listaautore = artisti.Where(a => a.Cognome == cognomeautoredacercare).Join(opere,
+                a => a.Id,
+                o => o.FkArtista,
+                (a, o) => o);
+            foreach (var item in listaautore)
+            {
+                Console.WriteLine(item);
+            }
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Q1("Picasso");
+            Console.WriteLine("-------------------------------------------");
         }
     }
 }
